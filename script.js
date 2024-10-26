@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const adviceId = document.querySelector(".advice-id");
     const adviceText = document.querySelector(".advice-text");
@@ -17,6 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     diceBtn.addEventListener("click", fetchAdvice);
-    fetchAdvice(); // Load initial advice on page load
+    fetchAdvice(); 
   });
   
