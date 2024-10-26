@@ -1,0 +1,101 @@
+/* style.css */
+
+body {
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .advice-box {
+    background-color: hsl(217, 19%, 24%);
+    color: hsl(193, 38%, 86%);
+    width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .advice-id {
+    font-size: 14px;
+    color: hsl(150, 100%, 66%);
+    margin-bottom: 16px;
+  }
+  
+  .advice-text {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  /* Divider image */
+  .divider {
+    margin: 20px 0;
+    width: 100%;
+  }
+  
+  /* Load different divider images based on screen size */
+  .divider {
+    content: url('/images/pattern-divider-mobile.svg');
+  }
+  
+  @media (min-width: 768px) {
+    .divider {
+      content: url('/images/pattern-divider-desktop.svg');
+    }
+  }
+  
+  /* Dice button */
+  .dice-btn {
+    background-color: hsl(150, 100%, 66%);
+    border: none;
+    border-radius: 50%;
+    padding: 16px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0); /* Start with no shadow */
+  }
+  
+  /* Glow effect on hover and active */
+  .dice-btn:hover,
+  .dice-btn:active {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0.7); /* Add glow effect */
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 480px) {
+    .advice-box {
+      width: 90%; /* Make the advice box take most of the screen width */
+      padding: 20px;
+    }
+  
+    .advice-id {
+      font-size: 12px;
+    }
+  
+    .advice-text {
+      font-size: 20px;
+    }
+  
+    .dice-btn {
+      padding: 12px; /* Slightly smaller button for mobile */
+      bottom: -20px;
+    }
+  }
+  
